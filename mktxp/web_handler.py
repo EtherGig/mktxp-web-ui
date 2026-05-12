@@ -11,8 +11,8 @@ from mktxp.cli.config.config import config_handler, log_capture
 class WebUIHandler:
     def __init__(self, metrics_app):
         self.metrics_app = metrics_app
-        # Path to web-ui folder (project root)
-        self.ui_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'web-ui')
+        # Path to web-ui folder (inside package)
+        self.ui_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'web-ui')
 
     def __call__(self, environ, start_response):
         path = environ.get('PATH_INFO', '')

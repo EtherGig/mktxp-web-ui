@@ -39,6 +39,7 @@ setup(
 
     package_data = {
         '': ['config/*.conf'],
+        'mktxp': ['web-ui/*'],
     },
 
     keywords = 'Mikrotik RouterOS Prometheus Exporter',
